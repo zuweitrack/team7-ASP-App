@@ -1,6 +1,7 @@
-from ubuntu:latest
+from ubuntu:18.04
 
 WORKDIR backend-svr
+
 
 RUN apt-get update && \
     apt-get install -y software-properties-common && \
@@ -32,4 +33,3 @@ RUN dotnet build
 EXPOSE 5000:5000
 
 CMD [ "dotnet", "run" ]
-
